@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +34,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+.totalContainer{
+  text-align: center;
+}
+
+.headerinfo{
+  margin-top: 20px;
+  font-family: 'Lora', serif;
+  color: wheat;
+  text-align: center;
+  font-size: 40px;
+}
+form{
+  text-align: center;
+}
+input{
+  width: 1000px;
+  font-size: 30px;  
+  border-radius: 20px;
+}
+.hobbiesText{
+  color: wheat;
+  font-size: 30px;
+  display: inline;
+
+}
+.hobbyMap{
+  padding: 20px;  
+  width: 85%;
+}
+.paddNo{
+  padding: 3px;
+  width: 10%;
 }

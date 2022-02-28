@@ -27,9 +27,8 @@ export default function HobbiesUseReducer() {
                 type="text"
                 name="hobby"
                 onInput={(event) => {
-                    setInput(event.target.value);
-                }}
-                value={input}
+                        setInput(event.target.value);    
+                }}     
             />
             <br />
             <button className="btn btn-success m-3"

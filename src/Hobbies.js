@@ -8,7 +8,7 @@ export default function HobbiesUseReducer() {
         if (action.type == "delete") {
             let newHobbies = [];
             [...state.hobbies].filter((val, index) => {
-                if (action.toRemove !== val) {
+                if (action.indextoDel !== index) {
                     newHobbies.push(val);
                 }
             });
@@ -23,6 +23,7 @@ export default function HobbiesUseReducer() {
     return (
         <div className="totalContainer">
             <input
+            value={input}
                 required
                 type="text"
                 name="hobby"
@@ -48,13 +49,13 @@ export default function HobbiesUseReducer() {
             <div>
                 {state.hobbies.map((hobby, index) => {
                     return (
-                        <div>
+                        <div key={index} >
                             <h2 className="hobbiesText">{index + 1} {hobby} </h2>
                             <button className="btn btn-danger m-2 paddNo"
                                 onClick={() => {
                                     dispatch({
                                         type: 'delete',
-                                        toRemove: hobby
+                                        indextoDel: index
                                     })
                                 }}>Click to delete</button>
                         </div>
